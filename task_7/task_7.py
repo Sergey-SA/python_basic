@@ -1,8 +1,10 @@
-def getCount():
-    print('count =', Animal.count)
-
 class Animal:
     count = 0
+
+    def getCount():
+        print('count =', Animal.count)
+
+    getCount = staticmethod(getCount)
 
     def __init__(self):
         Animal.count += 1
@@ -26,4 +28,4 @@ cat = Cat()
 dog = Dog()
 tiger = Tiger()
 
-getCount()
+Animal.getCount()
